@@ -59,8 +59,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LED1_R_Pin GPIO_PIN_0
+#define LED1_R_GPIO_Port GPIOA
+#define LED1_G_Pin GPIO_PIN_1
+#define LED1_G_GPIO_Port GPIOA
+#define LED1_B_Pin GPIO_PIN_2
+#define LED1_B_GPIO_Port GPIOA
+#define SW_Pin GPIO_PIN_10
+#define SW_GPIO_Port GPIOB
+#define SW_EXTI_IRQn EXTI15_10_IRQn
+#define LED2_R_Pin GPIO_PIN_6
+#define LED2_R_GPIO_Port GPIOB
+#define LED2_G_Pin GPIO_PIN_7
+#define LED2_G_GPIO_Port GPIOB
+#define LED2_B_Pin GPIO_PIN_8
+#define LED2_B_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim4;
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus
