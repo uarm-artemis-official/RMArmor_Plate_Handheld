@@ -14,7 +14,7 @@
   * in the root directory of this software component.
   *
   * @ project information
-  * 	Brief: Use separated STM32 chip to develop a handheld armor plate for
+  * 	Brief: Use separated STM32 chip to develop a hand-held armor plate for
   * 		   testing auto aiming easily, without relying on referee systems.
   * 	Chip: STM32F103C8T6 minimum system board
   *
@@ -110,7 +110,12 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
+	  if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == GPIO_PIN_SET)
+		  led_color = RED;
+	  else
+		  led_color = BLUE;
 	  /* select color */
 	  if(led_color == BLUE)
 		  led_set_color(0, 0, 255);
@@ -362,16 +367,20 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-    if(GPIO_Pin == SW_Pin)
-    {
-    	if(led_color == BLUE)
-    		led_color = RED;
-    	else if(led_color == RED)
-    		led_color = BLUE;
-    }
-}
+//void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+//{
+//    if(GPIO_Pin == SW_Pin)
+//    {
+//    	HAL_Delay(100);
+//    	if(GPIO_Pin == SW_Pin){
+//    		if(led_color == BLUE)
+//				led_color = RED;
+//			else if(led_color == RED)
+//				led_color = BLUE;
+//    	}
+//
+//    }
+//}
 /* USER CODE END 4 */
 
 /**

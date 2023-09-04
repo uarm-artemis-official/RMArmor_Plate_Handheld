@@ -17,9 +17,9 @@
 
 /* define general declarations for gimbal task here */
 #define LED1_TIM htim2
-#define LED1_CH_R TIM_CHANNEL_1
+#define LED1_CH_R TIM_CHANNEL_3
 #define LED1_CH_G TIM_CHANNEL_2
-#define LED1_CH_B TIM_CHANNEL_3
+#define LED1_CH_B TIM_CHANNEL_1
 
 #define LED2_TIM htim4
 #define LED2_CH_R TIM_CHANNEL_1

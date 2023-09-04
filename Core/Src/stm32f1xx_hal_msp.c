@@ -159,7 +159,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
     PA1     ------> TIM2_CH2
     PA2     ------> TIM2_CH3
     */
-    GPIO_InitStruct.Pin = LED1_R_Pin|LED1_G_Pin|LED1_B_Pin;
+    GPIO_InitStruct.Pin = LED1_B_Pin|LED1_G_Pin|LED1_R_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_MEDIUM;
     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);

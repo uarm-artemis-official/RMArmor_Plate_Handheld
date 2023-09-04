@@ -14,11 +14,11 @@ This repo is to create a hand held armor plate firmware for testing the auto aim
 
 **LED Settings**
 
-* LED1: PWM, use TIM2, CH1(R),CH2(G), CH3(B), 1kHz freq
+* LED1: PWM, use TIM2, CH3(R),CH2(G), CH1(B), 1kHz freq
 * LED1: PWM, use TIM4, CH1(R),CH2(G), CH3(B), 1kHz freq
 
 **SWITCH**
 
-* Pin: PB10, NVIC Activated
+* Pin: PB10, input mode
 
 ​	
